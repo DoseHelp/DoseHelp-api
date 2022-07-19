@@ -27,3 +27,14 @@ if Doctor.count == 0
     Doctor.create(first_name: "Ava", surname: "Murray", clinic: "Sydney", address: "56 Ann St", phone: "4965744", fax: "5647456745", prescriber_number: "8765434635")
     Doctor.create(first_name: "Violet", surname: "Parker", clinic: "Brisbane", address: "50 Bond St", phone: "4923462", fax: "45735473547", prescriber_number: "5785687856")
 end
+
+if Drug.count == 0
+    Drug.create(name: "Methadone", brand_name: "Biodone", form: "liquid", strength: "5mg/ml", cost: 5)
+    Drug.create(name: "Suboxone", brand_name: "Suboxone_film", form: "film", strength: "2mg/0.5mg", cost: 5)
+    Drug.create(name: "Suboxone", brand_name: "Suboxone_film", form: "film", strength: "8mg/2mg", cost: 5)
+    Drug.create(name: "Suboxone", brand_name: "Suboxone_film", form: "tablet", strength: "2mg/0.5mg", cost: 5)
+    Drug.create(name: "Suboxone", brand_name: "Suboxone_film", form: "tablet", strength: "8mg/2mg", cost: 5)
+    Drug.create(name: "Subutex", brand_name: "Subutex", form: "sublingual_tablets", strength: "0.4mg", cost: 5)
+    Drug.create(name: "Subutex", brand_name: "Sublingual_tablets", form: "sublingual_tablets", strength: "2mg", cost: 5)
+    Drug.create(name: "Subutex", brand_name: "Sublingual_tablets", form: "sublingual_tablets", strength: "8mg", cost: 5)
+end
