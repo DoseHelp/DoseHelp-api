@@ -20,3 +20,10 @@ if Patient.count == 0
     Patient.create(first_name: "Harvey", surname: "O'Brien", dob: "02/27/1984", address: "12 James St, Woolloongabba 4169", phone: "0419202654", gender: "Male", ihi: "8273953475350964", credit: 50.00)
     Patient.create(first_name: "Tyler", surname: "Green", dob: "01/15/1986", address: "12 James St, Woolloongabba 4169", phone: "0479150030", gender: "Male", ihi: "7393785746382987", credit: 10.00)
 end
+
+if Doctor.count == 0
+    Doctor.create(first_name: "Elijah", surname: "Lewis", clinic: "Brisbane", address: "304 Annie St", phone: "4921234", fax: "234656856", prescriber_number: "6987832455")
+    Doctor.create(first_name: "Elsie", surname: "Robertson", clinic: "Brisbane", address: "304 Annie St", phone: "4987748", fax: "231498753", prescriber_number: "4546456456")
+    Doctor.create(first_name: "Ava", surname: "Murray", clinic: "Sydney", address: "56 Ann St", phone: "4965744", fax: "5647456745", prescriber_number: "8765434635")
+    Doctor.create(first_name: "Violet", surname: "Parker", clinic: "Brisbane", address: "50 Bond St", phone: "4923462", fax: "45735473547", prescriber_number: "5785687856")
+end
