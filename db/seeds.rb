@@ -55,3 +55,10 @@ if Dispense.count == 0
     Dispense.create(user_id: 1, prescription_id: 2)
     Dispense.create(user_id: 1, prescription_id: 3)
 end 
+
+if Payment.count == 0 
+    Payment.create(prescription_id: 1, patient_id: 2)
+    Payment.create(prescription_id: 1, patient_id: 2)
+    Payment.create(prescription_id: 1, patient_id: 2)
+    Payment.create(prescription_id: 1, patient_id: 2)
+end
