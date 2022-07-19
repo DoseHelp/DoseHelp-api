@@ -38,3 +38,14 @@ if Drug.count == 0
     Drug.create(name: "Subutex", brand_name: "Sublingual_tablets", form: "sublingual_tablets", strength: "2mg", cost: 5)
     Drug.create(name: "Subutex", brand_name: "Sublingual_tablets", form: "sublingual_tablets", strength: "8mg", cost: 5)
 end
+
+if Prescription.count == 0
+    Prescription.create(issue_date: "12/02/2021", expiry_date: "12/03/2021", takeaway: true, doctor_id: 1, patient_id: 2, drug_id: 2, prescription_valid: true)
+    Prescription.create(issue_date: "28/04/2021", expiry_date: "28/04/2021", takeaway: false, doctor_id: 1, patient_id: 1, drug_id: 1, prescription_valid: true)
+    Prescription.create(issue_date: "17/06/2021", expiry_date: "17/07/2021", takeaway: false, doctor_id: 1, patient_id: 3, drug_id: 1, prescription_valid: true)
+    Prescription.create(issue_date: "25/02/2021", expiry_date: "25/03/2021", takeaway: false, doctor_id: 1, patient_id: 1, drug_id: 1, prescription_valid: true)
+    Prescription.create(issue_date: "22/01/2021", expiry_date: "22/02/2021", takeaway: false, doctor_id: 2, patient_id: 4, drug_id: 2, prescription_valid: true)
+    Prescription.create(issue_date: "09/03/2021", expiry_date: "09/04/2021", takeaway: false, doctor_id: 3, patient_id: 2, drug_id: 1, prescription_valid: true)
+    Prescription.create(issue_date: "18/04/2021", expiry_date: "18/05/2021", takeaway: false, doctor_id: 4, patient_id: 1, drug_id: 1, prescription_valid: true)
+    Prescription.create(issue_date: "07/05/2021", expiry_date: "07/06/2021", takeaway: false, doctor_id: 4, patient_id: 4, drug_id: 1, prescription_valid: true)
+end
