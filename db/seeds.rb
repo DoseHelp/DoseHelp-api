@@ -49,3 +49,9 @@ if Prescription.count == 0
     Prescription.create(issue_date: "18/04/2021", expiry_date: "18/05/2021", takeaway: false, doctor_id: 4, patient_id: 1, drug_id: 1, prescription_valid: true)
     Prescription.create(issue_date: "07/05/2021", expiry_date: "07/06/2021", takeaway: false, doctor_id: 4, patient_id: 4, drug_id: 1, prescription_valid: true)
 end
+
+if Dispense.count == 0
+    Dispense.create(user_id: 1, prescription_id: 1)
+    Dispense.create(user_id: 1, prescription_id: 2)
+    Dispense.create(user_id: 1, prescription_id: 3)
+end 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :dispenses
   resources :prescriptions
   resources :drugs
   resources :doctors
