@@ -62,3 +62,9 @@ if Payment.count == 0
     Payment.create(prescription_id: 1, patient_id: 2)
     Payment.create(prescription_id: 1, patient_id: 2)
 end
+
+if Note.count == 0 
+    Note.create(details: "Lorem ipsum dolor sir amet", prescription_id: 1, user_id: 1)
+    Note.create(details: "Lorem ipsum dolor sir amet", prescription_id: 2, user_id: 1)
+    Note.create(details: "Lorem ipsum dolor sir amet", prescription_id: 3, user_id: 1)
+end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_19_034514) do
+ActiveRecord::Schema.define(version: 2022_07_19_035531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,16 @@ ActiveRecord::Schema.define(version: 2022_07_19_034514) do
     t.float "cost"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.string "details"
+    t.bigint "prescription_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["prescription_id"], name: "index_notes_on_prescription_id"
+    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "patients", force: :cascade do |t|
@@ -96,6 +106,8 @@ ActiveRecord::Schema.define(version: 2022_07_19_034514) do
 
   add_foreign_key "dispenses", "prescriptions"
   add_foreign_key "dispenses", "users"
+  add_foreign_key "notes", "prescriptions"
+  add_foreign_key "notes", "users"
   add_foreign_key "payments", "patients"
   add_foreign_key "payments", "prescriptions"
   add_foreign_key "prescriptions", "doctors"
