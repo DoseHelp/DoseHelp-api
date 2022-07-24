@@ -104,6 +104,12 @@ ActiveRecord::Schema.define(version: 2022_07_19_035531) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "dispenses", "prescriptions"
+  add_foreign_key "dispenses", "users"
+  add_foreign_key "notes", "prescriptions"
+  add_foreign_key "notes", "users"
+  add_foreign_key "payments", "patients"
+  add_foreign_key "payments", "prescriptions"
   add_foreign_key "prescriptions", "doctors"
   add_foreign_key "prescriptions", "drugs"
   add_foreign_key "prescriptions", "patients"
