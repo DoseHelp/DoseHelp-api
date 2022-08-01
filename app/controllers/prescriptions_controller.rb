@@ -1,6 +1,6 @@
 class PrescriptionsController < ApplicationController
   before_action :set_prescription, only: [:show, :update, :destroy]
-
+ 
   # GET /prescriptions
   def index
     @prescriptions = Prescription.all
@@ -41,7 +41,12 @@ class PrescriptionsController < ApplicationController
   def destroy
     @prescription.destroy
   end
-
+  def prescriptions_list
+    # get list of prescriptions for a certain patient 
+    
+    @prescriptions_list = Prescription.where(patient_id: params[:patient_id])
+    render json: @prescriptions_list
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_prescription

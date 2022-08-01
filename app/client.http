@@ -1,0 +1,16 @@
+### Returns all Patients 
+# GET http://localhost:4000/patients
+
+POST http://localhost:4000/patients
+Content-Type: application/json
+
+    {
+    "first_name": "TEST",
+    "surname": "TEST_Last",
+    "dob": "19/04/1985",
+    "address": "12 James St, Woolloongabba 4169",
+    "phone": "0425743149",
+    "gender": "Male",
+    "ihi": "6504765474394843",
+    "credit": 10.0
+     }
