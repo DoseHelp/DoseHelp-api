@@ -19,7 +19,7 @@ class UsersController < ApplicationController
             auth_token = Knock::AuthToken.new payload: {sub: @user.id}
             print "---@@@@@"
             print  @user.id
-            render json: {username: @user.username, jwt: auth_token.token }, status: 200
+            render json: {username: @user.username, jwt: auth_token.token,userID: @user.id }, status: 200
         else
             render json: {error: "Invalid email or password"}
         end
