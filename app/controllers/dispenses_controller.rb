@@ -20,7 +20,7 @@ class DispensesController < ApplicationController
   # POST /dispenses
   def create
     @dispense = Dispense.new(dispense_params)
-
+    
     if @dispense.save
       render json: @dispense, status: :created#, location: @dispense
     else
