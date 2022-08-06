@@ -44,8 +44,13 @@ class PrescriptionsController < ApplicationController
   def prescriptions_list
     # get list of prescriptions for a certain patient 
     
+    
     @prescriptions_list = Prescription.where(patient_id: params[:patient_id])
-    render json: @prescriptions_list
+    puts @prescriptions_list
+    render :json =>  @prescriptions_list.to_json(:include => [:drug, :doctor] )
+    
+    # render json: @prescriptions_list
+    
   end
   private
     # Use callbacks to share common setup or constraints between actions.
